@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Calculadora</title>
+</head>
+<body>
+	<header>
+		<section>
+			<input type="text" id="x">
+			<input type="text" id="y">
+			<div class="um">
+				<button>1</button>
+				<button>2</button>
+				<button>3</button>
+				<button id="apagar">Apagar</button>
+			</div>
+			<div class="dois">
+				<button>4</button>
+				<button>5</button>
+				<button>6</button>
+				<button id="multiplicar">x</button>
+				<button id="apagarTudo">C</button>
+			</div>
+			<div class="tres">
+				<button>7</button>
+				<button>8</button>
+				<button>9</button>
+				<button id="subtrair">-</button>
+			</div>
+			<div class="quatro">
+				<button>0</button>
+				<button>,</button>
+				<button id="dividir">%</button>
+				<button id="somar">+</button>
+			</div>
+		</section>
+	</header>
+	<script type="text/javascript">
+		document.querySelector("#somar").addEventListener('click', function(){
+			console.log("Testando o Evento");
+		})
+	</script>
+<style type="text/css">
+.um{
+	display: flex;
+	flex-wrap: wrap;
+}
+.dois{
+	display: flex;
+	flex-wrap: wrap;
+}
+.tres{
+	display: flex;
+	flex-wrap: wrap;
+}
+.quatro{
+	display: flex;
+	flex-wrap: wrap;
+}
+</style>
+</body>
+</html>

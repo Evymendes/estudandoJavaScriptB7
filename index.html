@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página de Teste em Java Script</title>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+</head>
+<body onload="resetar()">
+	<div>
+		<input type="text" placeholder="digita" id="inputt">
+		<button onClick="todo()">insert</button>
+		<ul id="lista">
+			<li>que</li>
+			<li>quee</li>
+			<li>queee</li>
+		</ul>
+	</div>
+	<div id="helloo">
+		<p >que?</p>
+		<button onClick="acao()">Fazer ação</button>
+	</div>
+	<div>
+		<h1>Refresh ou Redirect</h1>
+		<button onclick="window.location.href = 'http://www.google.com.br';">Ir par ao Google</button>
+		<button onclick="window.location.href = 'teste.html';">Ir para o meu arquivo Teste </button>
+		<button onclick="window.location.href = window.location.href;">Atualizar a Página</button>
+	</div>	
+		<h1>Modificando o HTML</h1>
+	<div id="area">
+		<h3>Alguma Coisa...</h3>
+	</div>
+		<br/>
+	<button onclick="document.getElementById('area').innerHTML = prompt('Qual é o seu nome?');">1- Mudar nome do ID da'página</button>
+	<button onclick="this.innerHTML = prompt('Qual vai ser o nome do botão?');">2- Mudar nome do button</button>
+	<br>
+	<div id="area2">
+		<h3>Mudando através da função de JavaScript</h3>
+	</div>
+	<br>
+	<button onclick="trocarDiv()">3- Alterando através de Função</button>
+	<div id="area3">
+		<h3>Mudando para coisas preenchidas através da função de JavaScript</h3>
+	</div>
+	<br>
+	<button onclick="alterarEAcrescentar('Evelyn', 24)">3- Alterando através de Função2</button>
+	<br/><br/>
+
+
+	<div>
+	<h1>Manipulação de Listas</h1>
+	<h3>Ingredientes de bolo</h3>
+	<input type="text" id="ingrediente" />
+	<button onclick="adicionarIngrediente()">Adicionar</button>
+	<ul id="lista">
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ul>
+	</div>
+
+	
+	<div>
+		<h3>Operações</h3>
+		<input type="text" name="num1" id="num1" />
+		<input type="text" name="num2" id="num2"/>
+		<button onclick="somar()" id="button">Somar</button>
+	</div>
+	<div>
+		<h1>Arrey</h1>
+			<p>var lista = ["Arroz", "Feijão", "Carne", 20];</p>
+			<p><strong>lista[0]; - </strong>adidiciona o que quer</p>
+			<p><strong>lista.length -</strong> ver quantos tem</p>
+			<p><strong>lista.index0f("Feijão") -</strong> procura pelo nome desejado a posição do mesmo</p>
+			<p><strong>lista.join(","); - </strong> justar todos items da lista e mostrar por ,</p>
+			<p><strong>lista.pop(); - </strong> remover o último Elemento</p>
+			<p><strong>lista.shift(); - </strong> remover o primeiro Elemento</p>
+			<p><strong>lista.push("teste"); - </strong> adicionar um Elemento</p>
+			<p>ex: if (lista.index0f("Feijão") > -1) { <br />
+						alert("Tem na lista");			<br />
+					} else {							<br />
+						alert("Não tem na lista");</p>	<br />			
+	</div>
+	<div>
+		<h2>Verificadores</h2>
+		function testeVerificador() {	<br />
+		var x = promt("Diga um número:");	<br />
+			if (x > 10) {					<br />
+				alert("é maior que 10!!!"); <br />
+			} else {						<br />
+				alert("é menor que 10!!!"); <br />
+			}<br />
+		}
+	</div>
+	<div>
+		<h2>Loops</h2>
+		<p>While</p>
+		var x = 0;
+		document.while("Iniciando o Loop... ");
+			while (x < 10) {
+				document.while("Número " + x);
+				x++;
+			}
+		document.while("Finalizando o Loop...");
+	</div>
+	<div>
+		<p>For</p>
+		document.while("Iniciando o Loop... ");
+			for ( x= 0x; < 10; x++;) {
+				document.while("Número " + x);
+				
+			}
+		document.while("Finalizando o Loop...");
+	</div>
+	<div>
+		<h2>Switch</h2>
+		x = pront("Digite um número?");
+		switch(x) {
+		case "0";
+			alert("O número digitado é 0");
+			break;
+		case "1";
+			alert("O número digitado é 1");
+			break;
+		case "2";
+			alert("O número digitado é 2");
+			break;
+		default:
+			alert("Número insatisfeito!");
+			break;
+		}
+	</div>
+	<div>
+		<h2>Adivinhe o Número </h2>
+		<div id="n1">0</div>
+		<input type="text" id="n2" />
+		<div style="clear:both"></div>
+		<button onclick="verificar()">verificar</button>
+	</div>
+	<div>
+		<h2>Manipulando Data</h2>
+		<div>
+			var dt = new Date()
+			dt.getHours();
+			dt.getMinutes();
+			dt.getSeconds();
+		</div>
+		<div>
+			var dt = new Date(Date.parse("March 10, 2001"));
+			dt.getDate(); <p>dia do mes</p>
+			dt.getDay();	<p>dia da semana em numero</p>
+			dt.getFullYear();	<p>o ano</p>
+			dt.getMinutes();	<p>minuto</p>
+			dt.getDate()+"/"+(dt.getMonth()+1)+"/"+dt.getFullYear();	<p>mostrar do nosso jeito</p>
+			var dias =["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+			dias[dt.getDay()]  <p>dia da semana em nome</p>
+			dias[0];	 Domingo
+			var dt = new Date(Date.parse("March 10, 2001"));
+			dt.setDate( dt.getDate() + 60); dt;    (setar data nova)
+			dt.setHours(dt.getHours() + 25);  dt;
+		</div>
+	</div>
+	<div><br/><br/><br/>
+		<h2>Validação de Formulário</h2>
+		<form method="POST" onsubmit="return validar()">
+			<p>Digite um número de 2 algarismo</p>
+			<input type="text" name="Número" id="numeros"/>
+			<input type="submit"  value="Enviar" />
+		</form>
+	</div>
+	<div>
+		<h2 id="testar"> Vou testar ;)</h2>
+		<input type="text" id="eu">
+
+	<button onclick="document.getElementById('texto').innerHTML = prompt('Qual é o seu nome?');">1- Mudar nome do ID da'página</button>
+		<button onclick="mudar()">Testar </button>
+	</div>
+</body>
+</html>
